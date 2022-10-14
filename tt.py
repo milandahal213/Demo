@@ -19,7 +19,7 @@ class Count(object):
         self.A = A
         self.m=''
         self.counter = 0
-        A.irq(self.cb,self.A.IRQ_FALLING|self.A.IRQ_RISING) 
+        A.irq(self.cb,self.A.IRQ_FALLING)#|self.A.IRQ_RISING) 
 
     def cb(self,msg):   
         self.counter += 1 
